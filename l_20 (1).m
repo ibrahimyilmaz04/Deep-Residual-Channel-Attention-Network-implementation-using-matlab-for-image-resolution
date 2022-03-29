@@ -4,13 +4,13 @@ function lgraph = l_20
 % disp(size(k));
 % x = k(1:100000,:,:);
 % y = k(100001:200000,:,:);
-digitDatasetPath = fullfile('E:\Matlab convnet examples\project freelancer\dataset\1\');
+digitDatasetPath = fullfile('E:\Matlab convnet examples\project\dataset\1\');
 x = imageDatastore(digitDatasetPath, ...
     'IncludeSubfolders',true,'LabelSource','none');
 % numTrainFiles = 100;
 % [xTrain,xValidation] = splitEachLabel(x,0.80);
 
-digitDatasetPath1 = fullfile('E:\Matlab convnet examples\project freelancer\dataset\2\');
+digitDatasetPath1 = fullfile('E:\Matlab convnet examples\project\dataset\2\');
 y = imageDatastore(digitDatasetPath1, ...
     'IncludeSubfolders',true,'LabelSource','none');
 % numTrainFiles = 100;
