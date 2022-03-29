@@ -4,13 +4,13 @@ function lgraph = l_20
 % disp(size(k));
 % x = k(1:100000,:,:);
 % y = k(100001:200000,:,:);
-digitDatasetPath = fullfile('D:\kevin\lr\');
+digitDatasetPath = fullfile('D:\ibrahim\lr\');
 x = imageDatastore(digitDatasetPath, ...
     'IncludeSubfolders',true,'LabelSource','none');
 % numTrainFiles = 100;
 % [xTrain,xValidation] = splitEachLabel(x,0.80);
 
-digitDatasetPath1 = fullfile('D:\kevin\hr\');
+digitDatasetPath1 = fullfile('D:\ibrahim\hr\');
 y = imageDatastore(digitDatasetPath1, ...
     'IncludeSubfolders',true,'LabelSource','none');
 % numTrainFiles = 100;
