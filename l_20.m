@@ -4,23 +4,23 @@ function lgraph = l_20
 % disp(size(k));
 % x = k(1:100000,:,:);
 % y = k(100001:200000,:,:);
-% digitDatasetPath = fullfile('E:\Matlab convnet examples\project freelancer\dataset\1\');
+% digitDatasetPath = fullfile('E:\Matlab convnet examples\project\dataset\1\');
 % x = imageDatastore(digitDatasetPath, ...
 %     'IncludeSubfolders',true,'LabelSource','none');
 % numTrainFiles = 100;
 % [xTrain,xValidation] = splitEachLabel(x,0.80);
 
-% digitDatasetPath1 = fullfile('E:\Matlab convnet examples\project freelancer\dataset\2\');
+% digitDatasetPath1 = fullfile('E:\Matlab convnet examples\project\dataset\2\');
 % y = imageDatastore(digitDatasetPath1, ...
 %     'IncludeSubfolders',true,'LabelSource','none');
 % numTrainFiles = 100;
 % [yTrain,yValidation] = splitEachLabel(y,0.80);
 % disp(size(readimage(x,1)));
 
-digitDatasetPath1 = fullfile('D:\kevin\lr\');
+digitDatasetPath1 = fullfile('D:\ibrahim\lr\');
 dirOutput1 = dir(fullfile(digitDatasetPath1,'*.png'));
 fileNames1 = {dirOutput1.name};
-digitDatasetPath2 = fullfile('D:\kevin\hr\');
+digitDatasetPath2 = fullfile('D:\ibrahim\hr\');
 dirOutput2 = dir(fullfile(digitDatasetPath2,'*.png'));
 fileNames2 = {dirOutput2.name};
 L = 48;
@@ -30,8 +30,8 @@ y = imageDatastore({});
 % for k=1:length(fileNames1)
 for k=1:1
     H=fileNames1{k};
-    disp(['D:\kevin\lr\',H]);
-    img=imread(['D:\kevin\lr\',H]);
+    disp(['D:\ibrahim\lr\',H]);
+    img=imread(['D:\ibrahim\lr\',H]);
     [n, m, ~]= size(img);
     k1 = randi(n-L+1);
     k2 = randi(m-L+1);
@@ -45,8 +45,8 @@ for k=1:1
     delete "kk.png";
     
     H1=fileNames2{k};
-    disp(['D:\kevin\hr\',H1]);
-    img1=imread(['D:\kevin\hr\',H1]);
+    disp(['D:\ibrahim\hr\',H1]);
+    img1=imread(['D:\ibrahim\hr\',H1]);
     crop1 = img1((2*k1+(0:L1-1)),(2*k2+(0:L1-1)), :);
     imwrite(crop1,"kk1.png");
     crop_dat1 = imageDatastore(["kk1.png"]);
